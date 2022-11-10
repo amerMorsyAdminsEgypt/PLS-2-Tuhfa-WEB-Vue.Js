@@ -1,0 +1,41 @@
+@import url("./navbar-auth.scss");
+@import url("./dashboard-navbar.scss");
+@import url("./sidebar.scss");
+@import url("./page-content.scss");
+
+#app-container {
+  display: grid;
+  grid-template-rows: var(--navbar-height) var(--app-content-container-height);
+  height: 100vh;
+  transition: 0.5s;
+
+  .page-navbar {
+    grid-area: page-navbar;
+  }
+  .page-content {
+    grid-area: page-content;
+    background-color: var(--color-bg-page-content);
+    overflow: auto;
+  }
+}
+
+#app-container.dashboard-layout {
+  grid-template-columns:
+    var(--sidebar-width-close)
+    calc(100% - var(--sidebar-width-close));
+  grid-template-areas:
+    "page-sidebar page-navbar"
+    "page-sidebar page-content";
+}
+#app-container.auth-layout {
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "page-navbar"
+    "page-content";
+}
+
+#app-container.active {
+  grid-template-columns: var(--sidebar-width-open) calc(
+      100% - var(--sidebar-width-open)
+    );
+}

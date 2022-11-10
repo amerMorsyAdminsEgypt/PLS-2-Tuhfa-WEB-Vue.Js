@@ -1,0 +1,43 @@
+.time-counter-input-container {
+  height: 100%;
+  direction: ltr;
+
+  .title {
+    margin: 0;
+    height: 20px;
+    padding-bottom: 10px;
+  }
+
+  .time-counter-input > input {
+    border: solid 1px #a8adb7;
+    border-inline-end: none;
+    // font-family: "Lato";
+    font-size: 20px;
+    color: #525461;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 0;
+    -webkit-appearance: initial;
+  }
+
+  .time-counter-input > input:last-child {
+    border-inline-end: solid 1px #a8adb7;
+    border-end-end-radius: 6px;
+    border-start-end-radius: 6px;
+  }
+
+  .time-counter-input > input:first-child {
+    border-start-start-radius: 6px;
+    border-end-start-radius: 6px;
+  }
+
+  .time-counter-input > input:focus {
+    outline: none;
+    border: 1px solid #006fff;
+    caret-color: #006fff;
+  }
+
+  .time-counter-input > input:focus + input {
+    border-left: none;
+  }
+}

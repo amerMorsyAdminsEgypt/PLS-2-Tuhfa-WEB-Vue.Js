@@ -1,0 +1,22 @@
+.pagination-with-content {
+  height: var(--pagination-with-content-height);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  .custom-cards,
+  .sibling-pagination {
+    overflow: auto;
+  }
+  .custom-cards,
+  .table-container,
+  .sibling-pagination {
+    height: 100%;
+    padding: var(--app-content-gap);
+  }
+
+  .tab-content .table-container-custom {
+    padding: var(--app-content-gap);
+    height: 77vh;
+    overflow: auto;
+  }
+}

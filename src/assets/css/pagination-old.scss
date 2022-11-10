@@ -1,0 +1,260 @@
+.pagination-container {
+  .pagination-settings {
+    grid-area: pagination-settings;
+    display: flex;
+    align-items: center;
+    margin: 2.2rem 0;
+    justify-content: space-evenly;
+    .select-box-with-img {
+      margin-bottom: unset !important;
+      // background: #fff;
+      .placeholder-image {
+        display: none;
+      }
+      .multiselect {
+        .multiselect__tags {
+          padding: 0 10px !important;
+          .multiselect__single {
+            grid-template-columns: 100%;
+            grid-template-areas:
+              "select-box-label"
+              "select-box-container";
+          }
+          .multiselect__input {
+            margin: 0 !important;
+          }
+          .multiselect__placeholder {
+            padding: 01px 4px !important;
+            -webkit-line-clamp: 1;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+  .pagination-select {
+    grid-area: pagination-select;
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+
+    .sortTokensSelectBox {
+      flex-grow: 1;
+    }
+    .pageSizeSelectBox {
+      // width: 40%;
+      width: 100%;
+    }
+    .selectBox {
+      margin-bottom: unset !important;
+      // background: #fff;
+      .placeholder-image {
+        display: none;
+      }
+      .multiselect {
+        .multiselect__tags {
+          padding: 0 10px !important;
+          .multiselect__single {
+            grid-template-columns: 100%;
+            grid-template-areas:
+              "select-box-label"
+              "select-box-container";
+          }
+          .multiselect__input {
+            margin: 0 !important;
+          }
+          .multiselect__placeholder {
+            padding: 01px 4px !important;
+            -webkit-line-clamp: 1;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+  .pagination-inputs {
+    grid-area: pagination-inputs;
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+    justify-content: space-evenly;
+    .btn-pagination {
+      width: 29px;
+      height: 25px;
+      background: var(--color-sidebar);
+      border-radius: 50%;
+      /* padding: 3px; */
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .search-selfPage {
+      display: flex;
+      width: 100%;
+      .search-Input {
+        // width: 10rem;
+        width: 100%;
+        margin-bottom: unset !important;
+        input {
+          -webkit-padding-start: 10px;
+          padding-inline-start: 10px;
+          text-indent: 50% !important;
+          padding-top: 14px;
+          padding-bottom: 14px;
+        }
+        label,
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+  .pagination-total {
+    grid-area: pagination-total;
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+    justify-content: space-around;
+    .total {
+      display: flex;
+      gap: 2rem;
+      .label-count {
+        font-size: 20px;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.pagination-container {
+  min-height: 100px;
+  display: grid;
+  background-color: #efefef;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+  gap: 10px;
+  // grid-template-columns: 60% 40%;
+  grid-template-columns: 40% 60%;
+  // grid-template-rows: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+  // grid-template-areas:
+  //   "pagination-settings pagination-settings"
+  //   "pagination-select pagination-inputs"
+  //   "pagination-total pagination-total";
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    "pagination-select pagination-inputs"
+    "pagination-total pagination-total";
+}
+// responsive
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .pagination-container {
+    .pagination-inputs {
+      gap: 0;
+      .btn-pagination {
+        width: 20px;
+        padding: 0;
+      }
+      .search-selfPage {
+        // position: relative;
+        // .search-Input {
+        //   width: 8rem;
+        // }
+        .btn-pagination-search {
+          // position: absolute;
+          // top: 35%;
+          // left: 80%;
+          .icon-lg {
+            width: 30px;
+          }
+        }
+      }
+    }
+
+    .pagination-select {
+      align-items: flex-start;
+      .sortTokensSelectBox {
+        flex-grow: 1;
+      }
+      .pageSizeSelectBox {
+        // width: 55%;
+        width: 100%;
+      }
+    }
+
+    .pagination-total {
+      .total {
+        flex-direction: column;
+        gap: 0;
+        .label-count {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination-container {
+    grid-template-columns: 100%;
+    grid-template-rows: 35% 35% 30%;
+    grid-template-areas:
+      "pagination-inputs"
+      "pagination-select "
+      "pagination-total ";
+    gap: 5px;
+    .pagination-inputs {
+      gap: 0;
+      .btn-pagination {
+        width: 20px;
+        padding: 0;
+      }
+      .search-selfPage {
+        // position: relative;
+        // .search-Input {
+        //   width: 8rem;
+        // }
+        .btn-pagination-search {
+          // position: absolute;
+          // top: 35%;
+          // left: 80%;
+          .icon-lg {
+            width: 30px;
+          }
+        }
+      }
+    }
+
+    .pagination-select {
+      align-items: flex-start;
+      .sortTokensSelectBox {
+        flex-grow: 1;
+      }
+      .pageSizeSelectBox {
+        // width: 55%;
+        width: 100%;
+      }
+    }
+
+    .pagination-total {
+      .total {
+        flex-direction: column;
+        gap: 0;
+        .label-count {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

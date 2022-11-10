@@ -1,0 +1,37 @@
+.customFileInput {
+  --custom-file-input-img-url: url(../../assets/images/upload-icon.svg);
+  .delete-file {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 7px;
+    margin-inline-start: 7px;
+    cursor: pointer;
+  }
+  .grid-block-wrapper .file-preview-new .file-preview > span {
+    background-image: var(--custom-file-input-img-url) !important;
+    background-size: contain !important;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    svg {
+      display: none;
+    }
+    span.help-text {
+      width: 100%;
+      background-color: #fffc;
+      color: #000c;
+    }
+  }
+  .grid-block-wrapper .grid-block:not(.file-preview-new) .file-preview {
+    direction: ltr;
+    font-family: sans-serif;
+  }
+}

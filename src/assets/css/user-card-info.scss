@@ -1,0 +1,39 @@
+.user-card-info {
+  position: relative;
+  border: 0.3rem ridge var(--color-user-card-border);
+  margin: 10px;
+  padding: 10px 0;
+
+  .collapse-title {
+    position: absolute;
+    top: -23px;
+    background: var(--color-bg-main);
+    user-select: none;
+    padding: 1px 7px;
+    border: 1px solid var(--color-text-main);
+    border-radius: 3px;
+    margin-inline-start: 5px;
+    .fa {
+      transition: 0.3s;
+    }
+  }
+  .collapse-title.collapsed .fa {
+    transform: rotate(0deg);
+  }
+  .collapse-title.not-collapsed .fa {
+    transform: rotate(180deg);
+  }
+  .user-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 0;
+
+    .user-img {
+      height: 240px;
+      width: auto;
+      border: 1px solid var(--color-text-main);
+      border-radius: 15px;
+    }
+  }
+}

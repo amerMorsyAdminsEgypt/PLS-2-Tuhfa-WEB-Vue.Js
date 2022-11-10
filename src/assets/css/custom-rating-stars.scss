@@ -1,0 +1,30 @@
+.vue-star-rating {
+  .sr-only {
+    position: initial !important;
+  }
+}
+.vue-star-rating-with-input {
+  padding-top: 30px;
+  padding-inline-start: 25px;
+}
+.vue-star-rating-with-info {
+  justify-content: center;
+}
+svg.vue-star-rating-star {
+  width: 35px !important;
+  height: 35px !important;
+}
+
+@media (max-width: 768px) {
+  svg.vue-star-rating-star {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  svg.vue-star-rating-star {
+    width: 25px !important;
+    height: 25px !important;
+  }
+}

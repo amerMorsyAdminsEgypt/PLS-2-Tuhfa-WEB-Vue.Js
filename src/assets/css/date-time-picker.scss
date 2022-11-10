@@ -1,0 +1,23 @@
+.date-time-picker {
+  label {
+    z-index: initial !important;
+  }
+}
+.vc-popover-content-wrapper {
+  transform: initial !important;
+  inset: initial !important;
+  left: 50px !important;
+  right: 50px !important;
+  top: 75px !important;
+}
+
+.with-out-design {
+  position: relative;
+  .vc-popover-content-wrapper {
+    transform: initial !important;
+    inset: initial !important;
+    left: -70px !important;
+    right: -70px !important;
+    top: 40px !important;
+  }
+}

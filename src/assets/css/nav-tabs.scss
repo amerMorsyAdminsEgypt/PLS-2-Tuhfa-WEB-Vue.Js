@@ -1,0 +1,121 @@
+.tabs > div:first-child {
+  margin-inline: var(--app-content-gap);
+  border-bottom: 4px solid var(--outer-tab-active-color);
+}
+.nav-tabs {
+  border-bottom: none;
+  display: inline-flex;
+  width: calc(100% - var(--sidebar-width-close));
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: flex-end;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-start;
+
+  .nav-link {
+    border: none;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    line-height: 2.5rem;
+  }
+  li {
+    width: 100%;
+    min-width: 5px;
+    max-width: unset;
+    white-space: nowrap;
+  }
+}
+
+.icon-tab {
+  border: 1px solid transparent;
+  width: 1.7em;
+  height: 1.7em;
+  margin-inline-end: 3px;
+}
+@media only screen and (max-width: 960px) {
+  .icon-tab {
+    width: 1.6em;
+    height: 1.6em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .icon-tab {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .icon-tab {
+    width: 1.3em;
+    height: 1.3em;
+  }
+}
+
+.nav-tabs li a {
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  color: var(--color-text-main-light);
+  padding: 10px 2px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.nav-tabs li:not(a.active):hover {
+  background: #ccc;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.custom-tab-outer-li .nav-link.active,
+.custom-tab-inner-li .nav-link.active {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.custom-tab-outer-li .nav-link.active {
+  background-color: var(--outer-tab-active-color);
+  color: #fff;
+}
+
+.custom-tab-outer-content {
+  background-color: var(--outer-tab-active-color);
+  padding: 1em;
+  margin-top: 0 !important;
+}
+
+.custom-tab-inner-li .nav-link.active {
+  background-color: var(--inner-tab-active-color);
+  color: #fff;
+}
+.custom-tab-inner-li .nav-link {
+  color: var(--color-text-main-light);
+}
+
+.custom-tab-inner-content {
+  background-color: var(--inner-tab-active-color);
+  padding: 1em;
+  margin-top: 0 !important;
+}
+
+.custom-tab-card {
+  position: relative;
+  padding: 20px 20px;
+  background-color: var(--inner-tab-active-color);
+}
+
+.no-p {
+  padding: unset !important;
+  padding-top: 1rem !important;
+}

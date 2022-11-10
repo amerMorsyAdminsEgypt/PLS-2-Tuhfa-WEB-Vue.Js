@@ -1,0 +1,33 @@
+.alerts-list {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-inline: 15px;
+  width: 320px;
+  z-index: 105;
+  .alert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 0.25rem;
+    button.close {
+      position: initial;
+      top: initial;
+      right: initial;
+      padding: 0.3rem 0.6rem;
+      border: 1px solid;
+      border-radius: 5px;
+      &:hover,
+      &:focus {
+        border: initial;
+        border: 1px solid;
+      }
+    }
+    .alert-content {
+      width: 100%;
+      text-align: center;
+      margin-inline: 0.5rem;
+    }
+  }
+}

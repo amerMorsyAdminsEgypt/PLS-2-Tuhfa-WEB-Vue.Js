@@ -1,0 +1,152 @@
+#app-container {
+  .page-sidebar {
+    grid-area: page-sidebar;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-sidebar);
+    transition: 0.5s;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    ul {
+      position: relative;
+      top: 0;
+      width: 100%;
+      padding: 0;
+
+      .sidebar-header {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        gap: 8px;
+        margin-bottom: 15px;
+        .icon {
+          width: 60px;
+          height: 55px;
+          background-color: #fff;
+          border-radius: 50px;
+          padding: 7px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .title {
+          color: #fff;
+          font-size: 17px;
+          font-weight: bold;
+        }
+      }
+      li {
+        position: relative;
+        width: 100%;
+        list-style: none;
+        transition: 0.2s;
+
+        a {
+          position: relative;
+          width: 100%;
+          display: grid;
+          grid-template-columns: var(--page-sidebar-grid-template-columns);
+          text-decoration: none;
+          color: var(--color-text-secondary);
+          cursor: pointer;
+
+          .arrow,
+          .icon {
+            position: relative;
+            display: block;
+            min-width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+          }
+          img {
+            width: 35px;
+          }
+          .title {
+            position: relative;
+            display: block;
+            padding: 0;
+            height: var(--page-sidebar-title-height);
+            line-height: var(--page-sidebar-title-line-height);
+            text-align: var(--page-sidebar-title-text-align);
+            white-space: var(--page-sidebar-title-white-space);
+            font-size: var(--page-sidebar-title-font-size);
+
+            .fa {
+              margin-inline: 10px;
+              transition: 0.3s;
+            }
+          }
+        }
+        a.not-collapsed {
+          .title {
+            .fa {
+              -webkit-transform: rotate(180deg);
+              -moz-transform: rotate(180deg);
+              -o-transform: rotate(180deg);
+              -ms-transform: rotate(180deg);
+              transform: rotate(180deg);
+            }
+          }
+        }
+
+        a.active,
+        a:hover {
+          color: var(--color-top);
+          background-color: var(--color-bg-active-link);
+          box-shadow: inset 1px 5px 25px var(--color-top),
+            1px 5px 25px var(--color-top);
+        }
+      }
+
+      li.sub-menu {
+        ul {
+          background-color: var(--color-sidebar);
+          li {
+            a {
+              background: var(--color-sidebar);
+              border-inline-start: 4px solid transparent;
+            }
+            a.active,
+            a:hover {
+              background: initial;
+              color: var(--color-sidebar-sub-menu-active);
+              border-inline-start: 7px solid
+                var(--color-sidebar-sub-menu-active);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#app-container.active {
+  .page-sidebar ul li a {
+    grid-template-columns: var(--page-sidebar-grid-template-columns-active);
+    .title {
+      height: var(--page-sidebar-title-height-active);
+      line-height: var(--page-sidebar-title-line-height);
+      text-align: var(--page-sidebar-title-text-align-active);
+      white-space: var(--page-sidebar-white-space-active);
+      font-size: var(--page-sidebar-title-font-size-active);
+      display: flex;
+      align-items: center;
+      padding: 0 5px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  #app-container.active .page-sidebar ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0;
+    height: var(--page-sidebar-title-height);
+    line-height: var(--page-sidebar-title-line-height);
+    text-align: var(--page-sidebar-title-text-align);
+    white-space: var(--page-sidebar-title-white-space);
+    font-size: var(--page-sidebar-title-font-size);
+  }
+}

@@ -1,0 +1,12 @@
+.qr-container {
+  min-height: calc(100vh - var(--footer-height) - 2rem - var(--navbar-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .qr-countdown {
+    margin-top: 1rem;
+    font-size: 2.25rem;
+  }
+}

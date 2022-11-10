@@ -1,0 +1,112 @@
+.form-footer {
+  justify-content: flex-end;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  padding: 1.25rem 0.75rem 0.75rem 0.75rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom-right-radius: calc(0.3rem - 1px);
+  border-bottom-left-radius: calc(0.3rem - 1px);
+}
+.modal-footer {
+  border-top: 0px;
+  justify-content: center;
+  gap: 10px 0;
+  margin-top: 15px;
+}
+.modal-footer a,
+.modal-footer button,
+.form-footer a,
+.form-footer button,
+.btn-submit,
+.btn-cancel,
+.btn-leave {
+  color: var(--color-text-secondary);
+  display: inline-block;
+  width: auto;
+  height: fit-content;
+  padding: 5px 20px;
+  margin-top: 2px;
+  border-start-start-radius: 5px;
+  border-start-end-radius: 30px;
+  border-end-end-radius: 5px;
+  border-end-start-radius: 30px;
+  transition: 0.5s;
+  font-size: 18px;
+  // z-index: 1;
+}
+
+.modal-footer a,
+.modal-footer button,
+.form-footer a,
+.form-footer button {
+  margin-inline-start: 5px;
+}
+.modal-footer a,
+.modal-footer button {
+  width: 50%;
+  margin: 0;
+}
+
+.btn-submit {
+  background-color: #39cf19;
+  border: 2px solid #39cf19;
+}
+.btn-cancel {
+  background-color: #ec192e;
+  border: 2px solid #ec192e;
+}
+.btn-leave {
+  background-color: #3f5763;
+  border: 2px solid #3f5763;
+  width: 100% !important;
+}
+.btn-submit:hover,
+.btn-submit:active,
+.btn-leave:hover,
+.btn-leave:active,
+.btn-cancel:hover,
+.btn-cancel:active {
+  color: var(--color-text-secondary);
+  border: 2px solid var(--color-text-secondary);
+}
+
+.form-actions {
+  position: absolute;
+  top: 15px;
+  display: flex;
+  width: calc(100% - 15px);
+  justify-content: space-between;
+  .icon-submit,
+  .icon-cancel {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .icon-submit,
+  .icon-cancel {
+    transition: transform 0.3s;
+    img {
+      width: 40px;
+      background: #fff;
+      border-radius: 50%;
+    }
+  }
+  .icon-submit:hover,
+  .icon-cancel:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 767px) {
+  .icon-submit,
+  .icon-cancel {
+    img {
+      width: 35px !important;
+    }
+  }
+}
